@@ -18,3 +18,7 @@ C:\Sites-Imp\Client-Shubhcomputing.com\Bin\SoftwareArchitects.Web.CachingHandler
 C:\Sites-Imp\Client-Shubhcomputing.com\CachingHandler\obj\Debug\ResolveAssemblyReference.cache
 C:\Sites-Imp\Client-Shubhcomputing.com\CachingHandler\obj\Debug\SoftwareArchitects.Web.CachingHandler.dll
 C:\Sites-Imp\Client-Shubhcomputing.com\CachingHandler\obj\Debug\SoftwareArchitects.Web.CachingHandler.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\SoftwareArchitects.Web.CachingHandler.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\SoftwareArchitects.Web.CachingHandler.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\CachingHandler\obj\Debug\SoftwareArchitects.Web.CachingHandler.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\CachingHandler\obj\Debug\SoftwareArchitects.Web.CachingHandler.pdb

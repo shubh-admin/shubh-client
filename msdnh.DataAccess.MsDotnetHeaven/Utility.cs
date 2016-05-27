@@ -1,57 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
-using System.Data.SqlClient;
-using System.Net.Mail;
 using System.Security.Cryptography;
-using System.Configuration;
-using System.Security.Authentication;
-
-using msdnh.Common.Data.MsDotnetHeaven;
+using System.Text;
 using msdnh.DataAccess.Base;
-
-
 
 namespace msdnh.DataAccess.MsDotnetHeaven
 {
     /// <summary>
-    /// 
     /// </summary>
     public class Utility : SecurityBase, IDisposable
     {
-        public Utility()
+        #region IDisposable Members
+
+        public void Dispose()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            //throw new NotImplementedException();
         }
+
+        #endregion
+
         //public enum HashType
         //{
         //    MD5, SHA1, SHA256, SHA384, SHA512
 
         //}
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strPwd"></param>
         /// <returns></returns>
         public string DecryptString(string strPwd)
         {
-            string strDecryptPwd = strPwd;//(new SecurityBase()).DecodeString(strPwd,2);
+            var strDecryptPwd = strPwd; //(new SecurityBase()).DecodeString(strPwd,2);
             //Logics to decrypt the password
 
 
             return strDecryptPwd;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strPwd"></param>
         /// <returns></returns>
         public string EncryptString(string strPwd)
         {
-            string strEncryptPwd = strPwd;// string.Empty;
+            var strEncryptPwd = strPwd; // string.Empty;
             //Logics to Encrypt the password
             //byte[] buffer;
             //string strSalt = GenerateSalt();
@@ -63,33 +56,29 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
             return strEncryptPwd;
         }
+
         /// <summary>
-        /// Hash password using SHA512 
+        ///     Hash password using SHA512
         /// </summary>
         /// <param name="strPasswordToBeEncrypted"></param>
         /// <returns></returns>
         public string HashPassword(string strPasswordToBeEncrypted)
         {
+            SHA512 sha512 = new SHA512Managed();
 
-            SHA512 sha512 = new System.Security.Cryptography.SHA512Managed();
+            var sha512Bytes = Encoding.Default.GetBytes(strPasswordToBeEncrypted);
 
-            byte[] sha512Bytes = System.Text.Encoding.Default.GetBytes(strPasswordToBeEncrypted);
+            var cryString = sha512.ComputeHash(sha512Bytes);
 
-            byte[] cryString = sha512.ComputeHash(sha512Bytes);
+            var sha512Str = string.Empty;
 
-            string sha512Str = string.Empty;
-
-            for (int i = 0; i < cryString.Length; i++)
+            for (var i = 0; i < cryString.Length; i++)
             {
-
                 sha512Str += cryString[i].ToString("X");
-
             }
 
             return sha512Str;
-
         }
-
 
 
         //private static string GenerateSalt()
@@ -125,15 +114,14 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         //}
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="dtTable"></param>
         /// <param name="lstColName"></param>
         /// <returns></returns>
         public static DataTable RemoveColumns(DataTable dtTable, IList<string> lstColName)
         {
-            DataTable dtNewTable = new DataTable();
-            for (int intCount = 0; intCount < lstColName.Count; intCount++)
+            var dtNewTable = new DataTable();
+            for (var intCount = 0; intCount < lstColName.Count; intCount++)
             {
                 if (dtTable.Columns.CanRemove(dtTable.Columns[lstColName[intCount]]))
                 {
@@ -143,8 +131,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             dtNewTable = dtTable.Copy();
             return dtNewTable;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="dtTable"></param>
         /// <param name="lstOldCol"></param>
@@ -152,10 +140,10 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <returns></returns>
         public static DataTable RenameColumns(DataTable dtTable, IList<string> lstOldCol, IList<string> lstNewCol)
         {
-            DataTable dtNewTable = new DataTable();
+            var dtNewTable = new DataTable();
             if (lstOldCol.Count == lstNewCol.Count)
             {
-                for (int intCount = 0; intCount < lstOldCol.Count; intCount++)
+                for (var intCount = 0; intCount < lstOldCol.Count; intCount++)
                 {
                     foreach (DataColumn dtCol in dtTable.Columns)
                     {
@@ -169,8 +157,9 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             dtNewTable = dtTable.Copy();
             return dtNewTable;
         }
+
         /// <summary>
-        /// Add a new column in a Table
+        ///     Add a new column in a Table
         /// </summary>
         /// <param name="dtTable"></param>
         /// <param name="strColName"></param>
@@ -180,15 +169,5 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             dtTable.Columns.Add(new DataColumn(strColName));
             return dtTable;
         }
-
-        #region IDisposable Members
-
-        public void Dispose()
-        {
-            //throw new NotImplementedException();
-        }
-
-        #endregion
     }
-
 }

@@ -1,26 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Reflection;
-using System.Web.Security;
-
+using System.Text;
 
 namespace msdnh.DataAccess.Base
 {
+    /// <summary>
+    /// </summary>
     public class DataAccessBase : IDisposable
     {
+        private string _connectionString;
+
+
+        private bool _disposed;
+        internal bool _EnableParseXml;
+        internal string _ErrorMessage = string.Empty;
+        private string _InitialConnectionString = string.Empty;
+        internal string _SqlCommand = string.Empty;
+        internal CommandType _SqlCommandType = CommandType.Text;
+        internal string _UseDB = string.Empty;
+
+        internal SqlDataAdapter DaBase;
+        private int MAX_TRIES;
+        private int NUM_TRIES = 1;
+        internal BaseType TypeOfBase;
+
+        /// <summary>
+        /// </summary>
         public DataAccessBase()
         {
             //
             // TODO: Add constructor logic here
             //
-            _daBase = new SqlDataAdapter();
-            _daBase.SelectCommand = new SqlCommand();
+            DaBase = new SqlDataAdapter {SelectCommand = new SqlCommand()};
             _SqlCommandType = CommandType.Text;
             _EnableParseXml = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         ~DataAccessBase()
@@ -28,165 +50,35 @@ namespace msdnh.DataAccess.Base
             Dispose(false);
         }
 
-        internal SqlDataAdapter _daBase;
-        private String _ConnectionString;
-        private String _InitialConnectionString = String.Empty;
-        internal String _SqlCommand = String.Empty;
-        internal String _ErrorMessage = String.Empty;
-        internal CommandType _SqlCommandType = CommandType.Text;
-        internal String _UseDB = String.Empty;
-        internal bool _EnableParseXml;
-        private int NUM_TRIES = 1;
-        private int MAX_TRIES = 0;
-
-        internal enum BaseType { Fetcher, Modifier };
-        internal BaseType TypeOfBase;
-
-        # region properties
-
-        internal String ConnectionString
-        {
-            get
-            {
-                return _ConnectionString;
-            }
-            set
-            {
-                if (_ConnectionString != null && _ConnectionString != String.Empty)
-                    _ConnectionString = value;
-                else
-                {
-                    _InitialConnectionString = value;
-                    _ConnectionString = value;
-                }
-            }
-        }
-
-        protected String SqlCommand
-        {
-            get
-            {
-                return _SqlCommand;
-            }
-            set
-            {
-                if (_UseDB != String.Empty && !value.StartsWith(_UseDB) && _SqlCommandType != CommandType.StoredProcedure)
-                    _SqlCommand = _UseDB + value;
-                else
-                    _SqlCommand = value;
-            }
-        }
-
-        [Obsolete("Temporary fix until statements are converted to use parameters", false)]
-        protected String ErrorMessage
-        {
-            get
-            {
-                return _ErrorMessage;
-            }
-            set
-            {
-                _ErrorMessage = value;
-            }
-        }
-
-        protected CommandType SqlCommandType
-        {
-            get
-            {
-                return _SqlCommandType;
-            }
-            set
-            {
-                _SqlCommandType = value;
-            }
-
-        }
-
-        protected SqlParameterCollection Parameters
-        {
-            get
-            {
-                return _daBase.SelectCommand.Parameters;
-            }
-
-        }
-
-        protected System.Data.Common.DataTableMappingCollection TableMappings
-        {
-            get
-            {
-                return _daBase.TableMappings;
-            }
-
-        }
-
-        protected Int32 MaxPoolSize
-        {
-            get
-            {
-                if (MAX_TRIES > 0)
-                {
-                    return MAX_TRIES;
-                }
-                else
-                {
-                    string strMaxPoolSize = ReturnConnectionStringParameter(_ConnectionString, "Max Pool Size");
-
-                    if (strMaxPoolSize != string.Empty)
-                        MAX_TRIES = Convert.ToInt32(strMaxPoolSize);
-                    else
-                        MAX_TRIES = 2;
-
-                    return MAX_TRIES;
-                }
-            }
-        }
-
-        protected bool EnableParseXml
-        {
-            get
-            {
-                return _EnableParseXml;
-            }
-            set
-            {
-                _EnableParseXml = value;
-            }
-        }
-
-        # endregion
-
         internal void OpenConnection()
         {
-
-            if (_daBase.SelectCommand.Connection == null)
+            if (DaBase.SelectCommand.Connection == null)
             {
-                _daBase.SelectCommand.Connection = new SqlConnection(_ConnectionString);
+                DaBase.SelectCommand.Connection = new SqlConnection(_connectionString);
                 OpenValidConnection();
             }
             else
             {
-                switch (_daBase.SelectCommand.Connection.State)
+                switch (DaBase.SelectCommand.Connection.State)
                 {
                     case ConnectionState.Closed:
                     case ConnectionState.Broken:
-                        if (_daBase.SelectCommand.Connection.ConnectionString.ToLower() != _ConnectionString.ToLower())
-                            _daBase.SelectCommand.Connection.ConnectionString = _ConnectionString;
+                        if (DaBase.SelectCommand.Connection.ConnectionString.ToLower() != _connectionString.ToLower())
+                            DaBase.SelectCommand.Connection.ConnectionString = _connectionString;
                         OpenValidConnection();
                         break;
                     default:
-                        if (_daBase.SelectCommand.Connection.ConnectionString.ToLower() != _ConnectionString.ToLower())
+                        if (DaBase.SelectCommand.Connection.ConnectionString.ToLower() != _connectionString.ToLower())
                         {
-                            _daBase.SelectCommand.Connection.Close();
-                            _daBase.SelectCommand.Connection.ConnectionString = _ConnectionString;
+                            DaBase.SelectCommand.Connection.Close();
+                            DaBase.SelectCommand.Connection.ConnectionString = _connectionString;
                             OpenValidConnection();
                         }
                         break;
                 }
             }
 
-            _daBase.SelectCommand.CommandTimeout = 0;
+            DaBase.SelectCommand.CommandTimeout = 0;
         }
 
 
@@ -194,7 +86,7 @@ namespace msdnh.DataAccess.Base
         {
             try
             {
-                _daBase.SelectCommand.Connection.Open();
+                DaBase.SelectCommand.Connection.Open();
             }
             catch (SqlException sqle)
             {
@@ -214,73 +106,74 @@ namespace msdnh.DataAccess.Base
 
         internal void CloseConnection()
         {
-            _daBase.SelectCommand.CommandText = String.Empty;
-            _daBase.SelectCommand.Parameters.Clear(); ;
-            _daBase.TableMappings.Clear();
+            DaBase.SelectCommand.CommandText = string.Empty;
+            DaBase.SelectCommand.Parameters.Clear();
+            ;
+            DaBase.TableMappings.Clear();
             _SqlCommandType = CommandType.Text;
 
-            if (_daBase.SelectCommand.Connection != null)
+            if (DaBase.SelectCommand.Connection != null)
             {
-                _daBase.SelectCommand.Connection.Close();
+                DaBase.SelectCommand.Connection.Close();
             }
         }
 
-        internal void BaseError(Exception fe, String strBonus)
+        internal void BaseError(Exception fe, string strBonus)
         {
-            if (_ErrorMessage == String.Empty)
+            if (_ErrorMessage == string.Empty)
             {
-                System.Text.StringBuilder strBuilder = new System.Text.StringBuilder();
-                StackTrace stackTrace = new StackTrace();
-                StackFrame stackFrame = stackTrace.GetFrame(2);
-                MethodBase methodBase = stackFrame.GetMethod();
+                var strBuilder = new StringBuilder();
+                var stackTrace = new StackTrace();
+                var stackFrame = stackTrace.GetFrame(2);
+                var methodBase = stackFrame.GetMethod();
                 strBuilder.Append("DataAccess Call: " + methodBase.Name + "\r\n");
                 if (TypeOfBase == BaseType.Fetcher)
                     strBuilder.Append("SqlCommand: " + SqlCommand + "\r\n");
                 strBuilder.Append("Parameters:\r\n");
-                for (int i = 0; i < Parameters.Count; i++)
+                for (var i = 0; i < Parameters.Count; i++)
                 {
-                    strBuilder.Append(Parameters[i].ToString()).Append(" = ").Append(Parameters[i].Value).Append("\r\n");
+                    strBuilder.Append(Parameters[i]).Append(" = ").Append(Parameters[i].Value).Append("\r\n");
                 }
                 strBuilder.Append("\r\n" + strBonus);
-                
-               //ApplicationLog.WriteError(ApplicationLog.FormatException(fe, strBuilder.ToString()));
-            }
-            else
-            {
-                //ApplicationLog.WriteError(ApplicationLog.FormatException(fe, _ErrorMessage + "\r\n" + strBonus));
+
+                //ApplicationLog.WriteError(ApplicationLog.FormatException(fe, strBuilder.ToString()));
             }
         }
 
         internal void BaseError(Exception fe)
         {
-            BaseError(fe, String.Empty);
+            BaseError(fe, string.Empty);
         }
 
-        protected void ChangeDataBase(String strDatabaseName)
+        protected void ChangeDataBase(string strDatabaseName)
         {
-
-
             if (TypeOfBase == BaseType.Fetcher)
             {
                 _UseDB = "use " + strDatabaseName + "; ";
-                if (SqlCommand != String.Empty && !SqlCommand.StartsWith(_UseDB) && SqlCommandType != CommandType.StoredProcedure)
+                if (SqlCommand != string.Empty && !SqlCommand.StartsWith(_UseDB) &&
+                    SqlCommandType != CommandType.StoredProcedure)
                     SqlCommand = _UseDB + SqlCommand;
             }
             else
             {
-                if (_ConnectionString.ToLower().IndexOf("database=" + strDatabaseName) == -1)
+                if (_connectionString.ToLower().IndexOf("database=" + strDatabaseName) == -1)
                 {
-
                     if (_InitialConnectionString != null)
                     {
                         //_ConnectionString = _InitialConnectionString.ToLower().Replace("database=wh", "database=" + strDatabaseName);
-                        _ConnectionString = _InitialConnectionString.Replace("database=".ToLower() + ReturnConnectionStringParameter(_InitialConnectionString, "database"), "database=" + strDatabaseName);
+                        _connectionString =
+                            _InitialConnectionString.Replace(
+                                "database=".ToLower() +
+                                ReturnConnectionStringParameter(_InitialConnectionString, "database"),
+                                "database=" + strDatabaseName);
                     }
                     else
                     {
                         //ConnectionString = _ConnectionString.ToLower().Replace("database=wh", "database=" + strDatabaseName);
-                        ConnectionString = _ConnectionString.Replace("database=".ToLower() + ReturnConnectionStringParameter(_ConnectionString, "database"), "database=" + strDatabaseName);
-
+                        ConnectionString =
+                            _connectionString.Replace(
+                                "database=".ToLower() + ReturnConnectionStringParameter(_connectionString, "database"),
+                                "database=" + strDatabaseName);
                     }
                 }
             }
@@ -293,7 +186,7 @@ namespace msdnh.DataAccess.Base
             //				_SqlCommand = _UseDB + _SqlCommand;
         }
 
-        protected void ChangeConnection(String strConnectionString)
+        protected void ChangeConnection(string strConnectionString)
         {
             /*
              * TODO: Fix when we have 2 connection strings
@@ -301,44 +194,39 @@ namespace msdnh.DataAccess.Base
              * exclusively in base
              * */
 
-            if (ReturnConnectionStringParameter(_InitialConnectionString, "data source").Trim().ToLower().Equals(ReturnConnectionStringParameter(strConnectionString, "data source").Trim().ToLower()))
+            if (
+                ReturnConnectionStringParameter(_InitialConnectionString, "data source")
+                    .Trim()
+                    .ToLower()
+                    .Equals(ReturnConnectionStringParameter(strConnectionString, "data source").Trim().ToLower()))
             {
                 ChangeDataBase(ReturnConnectionStringParameter(strConnectionString, "database"));
             }
             else
             {
-                _ConnectionString = strConnectionString;
+                _connectionString = strConnectionString;
             }
         }
 
         protected void ResetConnection()
         {
-            if (_InitialConnectionString != null && _InitialConnectionString != _ConnectionString)
+            if (_InitialConnectionString != null && _InitialConnectionString != _connectionString)
             {
-                _ConnectionString = _InitialConnectionString;
+                _connectionString = _InitialConnectionString;
             }
         }
 
-        protected String ReturnConnectionStringParameter(String strConnectionString, String strKey)
+        protected string ReturnConnectionStringParameter(string strConnectionString, string strKey)
         {
-            String strValue = String.Empty;
-            string[] aryConnection = strConnectionString.Split(Convert.ToChar(";"));
-            foreach (String strParam in aryConnection)
+            var strValue = string.Empty;
+            var aryConnection = strConnectionString.Split(Convert.ToChar(";"));
+            foreach (var strParam in aryConnection)
             {
-                if (strParam.Length > (strKey.Length + 1) && strParam.ToLower().Substring(0, strKey.Length + 1) == (strKey.ToLower() + "="))
+                if (strParam.Length > strKey.Length + 1 &&
+                    strParam.ToLower().Substring(0, strKey.Length + 1) == strKey.ToLower() + "=")
                     strValue = strParam.Substring(strKey.Length + 1, strParam.Length - strKey.Length - 1);
             }
-            return (strValue);
-
-        }
-
-
-        private bool _disposed = false;
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            return strValue;
         }
 
         public void Dispose(bool disposing)
@@ -349,8 +237,8 @@ namespace msdnh.DataAccess.Base
                 try
                 {
                     // This may not be available during finalization, so trap any errors
-                    _daBase.Dispose();
-                    _daBase = null;
+                    DaBase.Dispose();
+                    DaBase = null;
                 }
                 finally
                 {
@@ -360,7 +248,94 @@ namespace msdnh.DataAccess.Base
             }
         }
 
+        internal enum BaseType
+        {
+            Fetcher,
+            Modifier
+        }
+
+        # region properties
+
+        internal string ConnectionString
+        {
+            get { return _connectionString; }
+            set
+            {
+                if (_connectionString != null && _connectionString != string.Empty)
+                    _connectionString = value;
+                else
+                {
+                    _InitialConnectionString = value;
+                    _connectionString = value;
+                }
+            }
+        }
+
+        protected string SqlCommand
+        {
+            get { return _SqlCommand; }
+            set
+            {
+                if (_UseDB != string.Empty && !value.StartsWith(_UseDB) &&
+                    _SqlCommandType != CommandType.StoredProcedure)
+                    _SqlCommand = _UseDB + value;
+                else
+                    _SqlCommand = value;
+            }
+        }
+
+        [Obsolete("Temporary fix until statements are converted to use parameters", false)]
+        protected string ErrorMessage
+        {
+            get { return _ErrorMessage; }
+            set { _ErrorMessage = value; }
+        }
+
+        protected CommandType SqlCommandType
+        {
+            get { return _SqlCommandType; }
+            set { _SqlCommandType = value; }
+        }
+
+        protected SqlParameterCollection Parameters
+        {
+            get { return DaBase.SelectCommand.Parameters; }
+        }
+
+        protected DataTableMappingCollection TableMappings
+        {
+            get { return DaBase.TableMappings; }
+        }
+
+        protected int MaxPoolSize
+        {
+            get
+            {
+                if (MAX_TRIES > 0)
+                {
+                    return MAX_TRIES;
+                }
+                var strMaxPoolSize = ReturnConnectionStringParameter(_connectionString, "Max Pool Size");
+
+                if (strMaxPoolSize != string.Empty)
+                    MAX_TRIES = Convert.ToInt32(strMaxPoolSize);
+                else
+                    MAX_TRIES = 2;
+
+                return MAX_TRIES;
+            }
+        }
+
+        protected bool EnableParseXml
+        {
+            get { return _EnableParseXml; }
+            set { _EnableParseXml = value; }
+        }
+
+        # endregion
+
         #region IDisposable Members
+
         /*        
         void IDisposable.Dispose()
         {
@@ -369,8 +344,7 @@ namespace msdnh.DataAccess.Base
             GC.SuppressFinalize(this);
         }
         */
-        #endregion
- 
-    }
 
+        #endregion
+    }
 }

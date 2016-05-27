@@ -1,19 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
 //using msdnm.Common;
-using msdnh.Common.Data.MsDotnetHeaven;
 using msdnh.DataAccess.Base;
 using msdnh.util;
 
 
 namespace msdnh.DataAccess.MsDotnetHeaven
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Fetcher : FetcherBase, IDisposable
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public Fetcher()
         {
         }
@@ -23,7 +26,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// </summary>
         /// <param name="strTableName"></param>
         /// <returns></returns>
-        public DataSet GetImages(String strTableName)
+        public DataSet GetImages(string strTableName)
         {
             SqlCommand = "spGetImages";
             SqlCommandType = CommandType.StoredProcedure;
@@ -73,17 +76,21 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
 
         }
 
-        public DataSet GetImages(Boolean blnStatus, string strCatName, String strTableName)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="blnStatus"></param>
+        /// <param name="strCatName"></param>
+        /// <param name="strTableName"></param>
+        /// <returns></returns>
+        public DataSet GetImages(bool blnStatus, string strCatName, string strTableName)
         {
             SqlCommand = "spGetImages";
             SqlCommandType = CommandType.StoredProcedure;
@@ -99,15 +106,13 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
 
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -115,7 +120,19 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="intCatId"></param>
         /// <param name="strTableName"></param>
         /// <returns></returns>
-        public DataSet GetImagesByCatId(Boolean blnStatus, Int32 intCatId, String strTableName)
+        public DataSet GetImagesByCatId(Int32 intCatId, String strTableName)
+        {
+            return GetImagesByCatId(false, intCatId, strTableName);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="blnStatus"></param>
+        /// <param name="intCatId"></param>
+        /// <param name="strTableName"></param>
+        /// <returns></returns>
+        public DataSet GetImagesByCatId(bool blnStatus, int intCatId, string strTableName)
         {
             SqlCommand = "spGetImagesByCatId";
             SqlCommandType = CommandType.StoredProcedure;
@@ -150,7 +167,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="intSortValue"></param>
         /// <param name="strTableName"></param>
         /// <returns></returns>
-        public DataSet GetImagesByCatId(Boolean blnStatus, Int32 intCatId, Int32 intSortValue, String strTableName)
+        public DataSet GetImagesByCatId(bool blnStatus, int intCatId, int intSortValue, string strTableName)
         {
             SqlCommand = "spGetImagesByCatId";
             SqlCommandType = CommandType.StoredProcedure;
@@ -168,10 +185,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -201,15 +215,17 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="strTableName"></param>
+        /// <returns></returns>
         public DataSet GetImageDetail(String strTableName)
         {
             SqlCommand = "spGetImageDetail";
@@ -226,15 +242,18 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="intImgId"></param>
+        /// <param name="strTableName"></param>
+        /// <returns></returns>
         public DataSet GetImageDetail(Int32 intImgId, String strTableName)
         {
             SqlCommand = "spGetImageDetail";
@@ -251,10 +270,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -284,10 +300,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -315,10 +328,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -347,10 +357,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -372,10 +379,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value
@@ -398,7 +402,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
             if ((ds != null) && ds.Tables.Contains("CheckUser"))
             {
-                Int32 intRes = ds.Tables["CheckUser"].Rows.Count;
+                var intRes = ds.Tables["CheckUser"].Rows.Count;
                 if (intRes > 0)
                     blRes = true;
             }
@@ -1381,10 +1385,7 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
                 if ((ds != null) && (ds.Tables.Contains(strTableName)))
                 {
-                    if (ds.Tables[strTableName].Rows.Count > 0)
-                        return ds;
-                    else
-                        return null;
+                    return ds.Tables[strTableName].Rows.Count > 0 ? ds : null;
                 }
             }
             return null;    //Omits not all code paths return a value

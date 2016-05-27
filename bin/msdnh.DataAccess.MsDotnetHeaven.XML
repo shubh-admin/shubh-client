@@ -4,6 +4,57 @@
         <name>msdnh.DataAccess.MsDotnetHeaven</name>
     </assembly>
     <members>
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Utility">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.DecryptString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.EncryptString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.HashPassword(System.String)">
+            <summary>
+            Hash password using SHA512 
+            </summary>
+            <param name="strPasswordToBeEncrypted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RemoveColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="dtTable"></param>
+            <param name="lstColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RenameColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="dtTable"></param>
+            <param name="lstOldCol"></param>
+            <param name="lstNewCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.AddColumn(System.Data.DataTable,System.String)">
+            <summary>
+            Add a new column in a Table
+            </summary>
+            <param name="dtTable"></param>
+            <param name="strColName"></param>
+            <returns></returns>
+        </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImages(System.String)">
             <summary>
             Status :2 for all status
@@ -496,57 +547,6 @@
             <param name="strQuery"></param>
             <param name="strStatus"></param>
             <param name="intUpdatedBy"></param>
-            <returns></returns>
-        </member>
-        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Utility">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.DecryptString(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="strPwd"></param>
-            <returns></returns>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.EncryptString(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="strPwd"></param>
-            <returns></returns>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.HashPassword(System.String)">
-            <summary>
-            Hash password using SHA512 
-            </summary>
-            <param name="strPasswordToBeEncrypted"></param>
-            <returns></returns>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RemoveColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String})">
-            <summary>
-            
-            </summary>
-            <param name="dtTable"></param>
-            <param name="lstColName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RenameColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
-            <summary>
-            
-            </summary>
-            <param name="dtTable"></param>
-            <param name="lstOldCol"></param>
-            <param name="lstNewCol"></param>
-            <returns></returns>
-        </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.AddColumn(System.Data.DataTable,System.String)">
-            <summary>
-            Add a new column in a Table
-            </summary>
-            <param name="dtTable"></param>
-            <param name="strColName"></param>
             <returns></returns>
         </member>
     </members>

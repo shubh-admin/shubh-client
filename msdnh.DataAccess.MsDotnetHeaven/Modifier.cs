@@ -1,26 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Data;
-using System.Data.SqlClient;
-
-using msdnh.Common.Data.MsDotnetHeaven;
-//using msdnm.Common;
 using msdnh.DataAccess.Base;
+//using msdnm.Common;
 
 
 namespace msdnh.DataAccess.MsDotnetHeaven
 {
     public class Modifier : ModifierBase, IDisposable
     {
-        public Modifier()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strUrl"></param>
         /// <param name="strError"></param>
@@ -39,21 +27,22 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Err", strError);
             Parameters.AddWithValue("@Descr", strDesc);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// Logged Users Presence on the system
+        ///     Logged Users Presence on the system
         /// </summary>
         /// <param name="intUserId"></param>
         /// <param name="strUserIP"></param>
         /// <param name="blnIsLogged"></param>
         /// <returns></returns>
-        public bool LoggedUser(Int32 intUserId, string strUserIP, bool blnIsLogged)
+        public bool LoggedUser(int intUserId, string strUserIP, bool blnIsLogged)
         {
             SqlCommand = "tblUserLog_spUserLog";
             SqlCommandType = CommandType.StoredProcedure;
@@ -62,15 +51,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@UserIP", strUserIP);
             Parameters.AddWithValue("@IsLogged", blnIsLogged);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="intUserId"></param>
         /// <param name="strDisplayName"></param>
@@ -84,8 +73,10 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="blnAccepted"></param>
         /// <param name="blnNewsLetters"></param>
         /// <returns></returns>
-        public bool UpdateUserProfile(Int32 intUserId, string strDisplayName, string strFName, string strLName, string strState,
-            string strCountry, string strImage, string strProfile, string strSignature, bool blnAccepted, bool blnNewsLetters)
+        public bool UpdateUserProfile(int intUserId, string strDisplayName, string strFName, string strLName,
+            string strState,
+            string strCountry, string strImage, string strProfile, string strSignature, bool blnAccepted,
+            bool blnNewsLetters)
         {
             SqlCommand = "spUpdateUserProfile";
             SqlCommandType = CommandType.StoredProcedure;
@@ -104,16 +95,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@NewsLetters", blnNewsLetters);
 
 
-
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strCatName"></param>
         /// <param name="intCatId"></param>
@@ -124,11 +114,9 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="dblCostUSD"></param>
         /// <param name="blnStatus"></param>
         /// <returns></returns>
-
-
-        public bool InsertImages(string strCatName, Int32 intCatId, string strImgCaption, string strImgDescr, string strImg, Double dblCostINR, Double dblCostUSD, Boolean blnStatus)
+        public bool InsertImages(string strCatName, int intCatId, string strImgCaption, string strImgDescr,
+            string strImg, double dblCostINR, double dblCostUSD, bool blnStatus)
         {
-
             SqlCommand = "spInsertImages";
             SqlCommandType = CommandType.StoredProcedure;
             Parameters.AddWithValue("@CatName", strCatName);
@@ -140,8 +128,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@CostUSD", dblCostUSD);
             Parameters.AddWithValue("@Status", Convert.ToInt32(blnStatus));
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
@@ -149,9 +137,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         }
 
 
-
         /// <summary>
-        /// Register new user
+        ///     Register new user
         /// </summary>
         /// <param name="FName">First Name of User</param>
         /// <param name="LName">Last Name of User</param>
@@ -167,15 +154,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Email", Email);
             Parameters.AddWithValue("@Pwd", Pwd);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// Add new user from Admin Panel
+        ///     Add new user from Admin Panel
         /// </summary>
         /// <param name="UserName"></param>
         /// <param name="Password"></param>
@@ -197,15 +185,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
             Parameters.AddWithValue("@UPDATEBY", UPDATEDBY);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// Update the USer record
+        ///     Update the USer record
         /// </summary>
         /// <param name="strID"></param>
         /// <param name="UserName"></param>
@@ -215,7 +204,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="ACCID"></param>
         /// <param name="UPDATEDBY"></param>
         /// <returns></returns>
-        public bool UpdateUser(string strID, string UserName, string Password, string Email, string Type, string ACCID, int UPDATEDBY)
+        public bool UpdateUser(string strID, string UserName, string Password, string Email, string Type, string ACCID,
+            int UPDATEDBY)
         {
             SqlCommand = "tblLogin_spUpdateUser";
             SqlCommandType = CommandType.StoredProcedure;
@@ -227,15 +217,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@ACCID", ACCID);
             Parameters.AddWithValue("@UPDATEBY", UPDATEDBY);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strID"></param>
         /// <param name="UserName"></param>
@@ -251,8 +241,9 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="strCountry"></param>
         /// <param name="strPhone"></param>
         /// <returns></returns>
-
-        public bool UpdateUser(string strID, string UserName, string Password, string Email, string Type, string ACCID, int UPDATEDBY, string strName, string strAdd1, string strAdd2, string strCity, string strCountry, string strPhone)
+        public bool UpdateUser(string strID, string UserName, string Password, string Email, string Type, string ACCID,
+            int UPDATEDBY, string strName, string strAdd1, string strAdd2, string strCity, string strCountry,
+            string strPhone)
         {
             SqlCommand = "tblLogin_spUpdateUser";
             SqlCommandType = CommandType.StoredProcedure;
@@ -273,15 +264,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Country", strCountry);
             Parameters.AddWithValue("@Phone", strPhone);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strUserID"></param>
         /// <param name="strStatus"></param>
@@ -291,7 +282,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="strNextDue"></param>
         /// <param name="UPDATEDBY"></param>
         /// <returns></returns>
-        public bool AddDomains(string strUserID, string strStatus, string strDomain, string strPrice, string strRegDate, string strNextDue, int UPDATEDBY)
+        public bool AddDomains(string strUserID, string strStatus, string strDomain, string strPrice, string strRegDate,
+            string strNextDue, int UPDATEDBY)
         {
             SqlCommand = "tblDomains_spAddDomains";
             SqlCommandType = CommandType.StoredProcedure;
@@ -305,15 +297,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@NextDue", strNextDue);
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strUserID"></param>
         /// <param name="strID"></param>
@@ -324,7 +316,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="strNextDue"></param>
         /// <param name="UPDATEDBY"></param>
         /// <returns></returns>
-        public bool UpdateDomains(string strUserID, string strID, string strStatus, string strDomain, string strPrice, string strRegDate, string strNextDue, int UPDATEDBY)
+        public bool UpdateDomains(string strUserID, string strID, string strStatus, string strDomain, string strPrice,
+            string strRegDate, string strNextDue, int UPDATEDBY)
         {
             SqlCommand = "tblDomains_spUpdateDomains";
             SqlCommandType = CommandType.StoredProcedure;
@@ -339,8 +332,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@NextDue", strNextDue);
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
@@ -348,7 +341,6 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strUserId"></param>
         /// <param name="strActivate"></param>
@@ -360,15 +352,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@UserId", strUserId);
             Parameters.AddWithValue("@Activate", strActivate);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// Remove records permanently
+        ///     Remove records permanently
         /// </summary>
         /// <param name="strUserId"></param>
         /// <returns></returns>
@@ -378,43 +371,46 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             SqlCommandType = CommandType.Text;
             Parameters.AddWithValue("@UserId", strUserId);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
 
-        public bool DeleteImageById(Int32 intImgId)
+        public bool DeleteImageById(int intImgId)
         {
             SqlCommand = "spDeleteImageById";
             SqlCommandType = CommandType.StoredProcedure;
 
             Parameters.AddWithValue("@ImgId", intImgId);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
-        public bool DeleteImageDetailById(Int32 intId)
+
+        public bool DeleteImageDetailById(int intId)
         {
             SqlCommand = "spDeleteImageDetailById";
             SqlCommandType = CommandType.StoredProcedure;
 
             Parameters.AddWithValue("@Id", intId);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
-        public bool UpdateImageById(String strCategoryName, Int32 intCategoryId, string strImageCaption, string strImageDescr, Double dblCostINR, Double dblCostUSD, Int32 intImageOrder, Int32 intImageId)
+
+        public bool UpdateImageById(string strCategoryName, int intCategoryId, string strImageCaption,
+            string strImageDescr, double dblCostINR, double dblCostUSD, int intImageOrder, int intImageId)
         {
             SqlCommand = "spUpdateImageById";
             SqlCommandType = CommandType.StoredProcedure;
@@ -429,15 +425,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@ImageOrder", intImageOrder);
             Parameters.AddWithValue("@ImageId", intImageId);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
 
-        public bool UpdateImageDetailById(String strSize, string strCraft, Double dblCostINR, Double dblCostUSD, string strOther, Int32 intId)
+        public bool UpdateImageDetailById(string strSize, string strCraft, double dblCostINR, double dblCostUSD,
+            string strOther, int intId)
         {
             SqlCommand = "spUpdateImageDetailById";
             SqlCommandType = CommandType.StoredProcedure;
@@ -449,14 +446,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Other", strOther);
             Parameters.AddWithValue("@Id", intId);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
-        public bool InsertImageDetail(Int32 intImageId, String strSize, string strCraft, Double dblCostINR, Double dblCostUSD, string strOther)
+
+        public bool InsertImageDetail(int intImageId, string strSize, string strCraft, double dblCostINR,
+            double dblCostUSD, string strOther)
         {
             SqlCommand = "spInsertImageDetail";
             SqlCommandType = CommandType.StoredProcedure;
@@ -469,8 +468,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Other", strOther);
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
@@ -479,19 +478,19 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
         public bool GenerateResetKey(string strUserId, string strResetKey)
         {
-
             SqlCommand = "Update [USERS] SET reset_key = @ResetKey WHERE USERID = @UserId";
             SqlCommandType = CommandType.Text;
             Parameters.AddWithValue("@UserId", strUserId);
             Parameters.AddWithValue("@ResetKey", strResetKey);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         public bool UpdateUserPassword(string strNewPassword, string strUserid)
         {
             SqlCommand = "Update [tblLogin] SET Password = @NewPassword WHERE ID = @UserId";
@@ -499,15 +498,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@NewPassword", strNewPassword);
             Parameters.AddWithValue("@UserId", strUserid);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strTicketID"></param>
         /// <param name="intUserID"></param>
@@ -520,7 +519,9 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         /// <param name="strStatus"></param>
         /// <param name="intUpdatedBy"></param>
         /// <returns></returns>
-        public bool GenerateTicket(string strTicketID, Int32 intUserID, string strDepartment, string strPriority, string strPanelDetail, string strACCID, string strSubject, string strQuery, string strStatus, Int32 intUpdatedBy)
+        public bool GenerateTicket(string strTicketID, int intUserID, string strDepartment, string strPriority,
+            string strPanelDetail, string strACCID, string strSubject, string strQuery, string strStatus,
+            int intUpdatedBy)
         {
             SqlCommand = "tblSupport_spCreateTicket";
             SqlCommandType = CommandType.StoredProcedure;
@@ -537,22 +538,22 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@UpdatedBy", intUpdatedBy);
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="strTicketID"></param>
         /// <param name="strQuery"></param>
         /// <param name="strStatus"></param>
         /// <param name="intUpdatedBy"></param>
         /// <returns></returns>
-        public bool UpdateTicket(string strTicketID, string strQuery, string strStatus, Int32 intUpdatedBy)
+        public bool UpdateTicket(string strTicketID, string strQuery, string strStatus, int intUpdatedBy)
         {
             SqlCommand = "tblSupport_spUpdateTicket";
             SqlCommandType = CommandType.StoredProcedure;
@@ -563,14 +564,15 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@UpdatedBy", intUpdatedBy);
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
-        public bool SubmitComments(Int32 intResourceId, Int32 intUserId, DateTime dtDate, string strDescr)
+
+        public bool SubmitComments(int intResourceId, int intUserId, DateTime dtDate, string strDescr)
         {
             //Pass current date if date is null/blank
             dtDate = dtDate == null ? DateTime.Now : dtDate;
@@ -583,8 +585,8 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Date", dtDate);
             Parameters.AddWithValue("@Descr", strDescr);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
@@ -592,9 +594,9 @@ namespace msdnh.DataAccess.MsDotnetHeaven
         }
 
 
-        public bool SubmitResource(Int32 intResourceId, Int32 intCatId, Int32 intSubCatId, Int32 intUserId, string strTitle, string strDescr, string strUrl, Int32 intCredits, bool blnUpdateView, string strMetaDesc, string strMetaKeys)
+        public bool SubmitResource(int intResourceId, int intCatId, int intSubCatId, int intUserId, string strTitle,
+            string strDescr, string strUrl, int intCredits, bool blnUpdateView, string strMetaDesc, string strMetaKeys)
         {
-
             SqlCommand = "spSubmitResource";
             SqlCommandType = CommandType.StoredProcedure;
 
@@ -611,17 +613,17 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@metaDesc", strMetaDesc);
             Parameters.AddWithValue("@metaKey", strMetaKeys);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
 
-        public bool UpdateResource(Int32 intResourceId, Int32 intCatId, Int32 intSubCatId, Int32 intUserId, Int32 intEditedBy, string strTitle, string strDescr, string strUrl, Int32 intCredits, string strMetaDesc, string strMetaKeys)
+        public bool UpdateResource(int intResourceId, int intCatId, int intSubCatId, int intUserId, int intEditedBy,
+            string strTitle, string strDescr, string strUrl, int intCredits, string strMetaDesc, string strMetaKeys)
         {
-
             SqlCommand = "spUpdateResource";
             SqlCommandType = CommandType.StoredProcedure;
 
@@ -638,17 +640,16 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@metaDesc", strMetaDesc);
             Parameters.AddWithValue("@metaKey", strMetaKeys);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
 
-        public bool SendMessage(Int32 intRecepientID, Int32 intSenderID, string strSubject, string strMessage)
+        public bool SendMessage(int intRecepientID, int intSenderID, string strSubject, string strMessage)
         {
-
             SqlCommand = "spSendMessage";
             SqlCommandType = CommandType.StoredProcedure;
 
@@ -657,24 +658,23 @@ namespace msdnh.DataAccess.MsDotnetHeaven
             Parameters.AddWithValue("@Subject", strSubject);
             Parameters.AddWithValue("@Message", strMessage);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
 
-        public bool DeleteContacts(Int32 intID)
+        public bool DeleteContacts(int intID)
         {
-
             SqlCommand = "spDeleteContacts";
             SqlCommandType = CommandType.StoredProcedure;
 
             Parameters.AddWithValue("@ID", intID);
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
@@ -683,32 +683,17 @@ namespace msdnh.DataAccess.MsDotnetHeaven
 
         public bool DeleteErrorLog()
         {
-
             SqlCommand = "spDeleteErrorLog";
             SqlCommandType = CommandType.StoredProcedure;
 
 
-            bool blnRes = false;
-            int intRes = ExecuteNonQuery();
+            var blnRes = false;
+            var intRes = ExecuteNonQuery();
             if (intRes > 0)
                 blnRes = true;
 
             return blnRes;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /*
@@ -799,5 +784,4 @@ namespace msdnh.DataAccess.MsDotnetHeaven
    }
    * */
     }
-
 }

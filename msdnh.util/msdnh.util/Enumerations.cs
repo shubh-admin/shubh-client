@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace msdnh.util
+﻿namespace msdnh.util
 {
     public static class Enumerations
     {
+        public enum MenusDirection
+        {
+            Horizontal = 1,
+            Vertical
+        }
+
         public enum UserDetail
         {
-            UserId=1,
-            FirstName=2,
-            LastName=3,
+            UserId = 1,
+            FirstName = 2,
+            LastName = 3
         }
+
         public enum UserRoles
         {
             Owner = 1,
@@ -32,17 +34,10 @@ namespace msdnh.util
             AddComment = 15
         }
 
-        public enum MenusDirection
-        {
-            Horizontal = 1,
-            Vertical
-        }
         public enum UserType
         {
             Staff,
             Client
         }
-
-
     }
 }

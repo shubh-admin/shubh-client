@@ -14,3 +14,9 @@ C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
 C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
 C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
 C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.XML
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.csprojResolveAssemblyReference.cache
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb

@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Web.Security;
-using System.Security.Cryptography;
-using System.Configuration;
-using System.Configuration.Provider;
-using System.Security.Authentication;
-using System.Collections.Specialized;
-using System.Text.RegularExpressions;
-
-
-namespace msdnh.DataAccess.Base
+﻿namespace msdnh.DataAccess.Base
 {
     public class SecurityBase //: MembershipProvider
     {
