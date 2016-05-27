@@ -1,0 +1,5 @@
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\bin\Release\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\bin\Release\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Release\ResolveAssemblyReference.cache
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Release\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Release\msdnh.DataAccess.Base.pdb

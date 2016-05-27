@@ -1,26 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client-Shubhcomputing.com", "..\Client-Shubhcomputing.com", "{C8357535-6774-4278-B497-A92C7170927C}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFramework = "3.5"
-		Debug.AspNetCompiler.VirtualPath = "/Client-Shubhcomputing.com"
-		Debug.AspNetCompiler.PhysicalPath = "..\Client-Shubhcomputing.com\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Client-Shubhcomputing.com\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Client-Shubhcomputing.com"
-		Release.AspNetCompiler.PhysicalPath = "..\Client-Shubhcomputing.com\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Client-Shubhcomputing.com\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52025"
-	EndProjectSection
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.BF.MsDotnetHeaven", "msdnh.BF.MsDotnetHeaven\msdnh.BF.MsDotnetHeaven.csproj", "{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.Common.Data.MsDotnetHeaven", "msdnh.Common.Data.MsDotnetHeaven\msdnh.Common.Data.MsDotnetHeaven.csproj", "{86662961-B16C-4BC2-B5D5-3CA215A54984}"
@@ -33,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CachingHandler", "CachingHa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.util", "msdnh.util\msdnh.util\msdnh.util.csproj", "{B944F5ED-9B79-4A02-8358-EFD01527F335}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{9F74FE8C-56D1-4A64-A5C7-5061068E7829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8357535-6774-4278-B497-A92C7170927C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8357535-6774-4278-B497-A92C7170927C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8357535-6774-4278-B497-A92C7170927C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8357535-6774-4278-B497-A92C7170927C}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +47,10 @@ Global
 		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F74FE8C-56D1-4A64-A5C7-5061068E7829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F74FE8C-56D1-4A64-A5C7-5061068E7829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F74FE8C-56D1-4A64-A5C7-5061068E7829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F74FE8C-56D1-4A64-A5C7-5061068E7829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,21 @@
+C:\Sites-Imp\msdnh\Bin\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\msdnh\Bin\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\msdnh\msdnh.DataAccess.Base\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\msdnh\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\msdnh\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\singhshashtar.com\Bin\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\singhshashtar.com\Bin\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.Base.pdb
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.Base\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.Base.XML
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.Base.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.Base.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb
+E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.csprojResolveAssemblyReference.cache

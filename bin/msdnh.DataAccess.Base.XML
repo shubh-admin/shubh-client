@@ -4,12 +4,129 @@
         <name>msdnh.DataAccess.Base</name>
     </assembly>
     <members>
+        <member name="T:msdnh.DataAccess.Base.CleanUtils">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.CleanUtils.ToDate(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.CleanUtils.ToString(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.CleanUtils.ToBool(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.CleanUtils.ToInt(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.CleanUtils.ToHexString(System.Byte[])">
+            <summary>
+            </summary>
+            <param name="hashedBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:msdnh.DataAccess.Base.DataAccessBase">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.DataAccessBase.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:msdnh.DataAccess.Base.FetcherBase">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.FetcherBase.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.FetcherBase.ExecuteNonQuery">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.FetcherBase.ExecuteScalar">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:msdnh.DataAccess.Base.FetcherBase.Fill(System.Data.DataSet)">
             <summary>
-            This fill should be used primarily for typed datasets and commands returning multiple results
-            with TableMappings defined. There is some use for this on non-typed datasets, but it's not ideal.
+                This fill should be used primarily for typed datasets and commands returning multiple results
+                with TableMappings defined. There is some use for this on non-typed datasets, but it's not ideal.
             </summary>
             <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:msdnh.DataAccess.Base.ModifierBase">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.ModifierBase.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.ModifierBase.Update(System.Data.DataSet,System.Data.SqlClient.SqlDataAdapter,System.String)">
+            <summary>
+            </summary>
+            <param name="aDataSet"></param>
+            <param name="anAdapter"></param>
+            <param name="strError"></param>
+            <returns></returns>
+        </member>
+        <member name="T:msdnh.DataAccess.Base.Transform">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToDateTime(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToString(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToString(System.Object,System.String)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <param name="defValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToStringArray(System.Collections.Specialized.StringCollection)">
+            <summary>
+            </summary>
+            <param name="coll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToBool(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.Base.Transform.ToInt(System.Object)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
             <returns></returns>
         </member>
     </members>

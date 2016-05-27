@@ -1,0 +1,5 @@
+C:\Sites-Imp\Jaipurmentor.com\msdnh.util\msdnh.util\bin\Release\msdnh.util.dll
+C:\Sites-Imp\Jaipurmentor.com\msdnh.util\msdnh.util\bin\Release\msdnh.util.pdb
+C:\Sites-Imp\Jaipurmentor.com\msdnh.util\msdnh.util\obj\Release\ResolveAssemblyReference.cache
+C:\Sites-Imp\Jaipurmentor.com\msdnh.util\msdnh.util\obj\Release\msdnh.util.dll
+C:\Sites-Imp\Jaipurmentor.com\msdnh.util\msdnh.util\obj\Release\msdnh.util.pdb
