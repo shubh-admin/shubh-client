@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client-Shubhcomputing.com", "..\Client-Shubhcomputing.com", "{C8357535-6774-4278-B497-A92C7170927C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/Client-Shubhcomputing.com"
+		Debug.AspNetCompiler.PhysicalPath = "..\Client-Shubhcomputing.com\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Client-Shubhcomputing.com\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Client-Shubhcomputing.com"
+		Release.AspNetCompiler.PhysicalPath = "..\Client-Shubhcomputing.com\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Client-Shubhcomputing.com\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52025"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.BF.MsDotnetHeaven", "msdnh.BF.MsDotnetHeaven\msdnh.BF.MsDotnetHeaven.csproj", "{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.Common.Data.MsDotnetHeaven", "msdnh.Common.Data.MsDotnetHeaven\msdnh.Common.Data.MsDotnetHeaven.csproj", "{86662961-B16C-4BC2-B5D5-3CA215A54984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.DataAccess.Base", "msdnh.DataAccess.Base\msdnh.DataAccess.Base.csproj", "{D5BD9C34-4D80-4D43-AF35-573D8615C12F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.DataAccess.MsDotnetHeaven", "msdnh.DataAccess.MsDotnetHeaven\msdnh.DataAccess.MsDotnetHeaven.csproj", "{160DC6CD-A9A7-48BC-834E-C52B1DE9535D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CachingHandler", "CachingHandler\CachingHandler.csproj", "{F449E5A1-AB48-479B-917D-CE39C63B6FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdnh.util", "msdnh.util\msdnh.util\msdnh.util.csproj", "{B944F5ED-9B79-4A02-8358-EFD01527F335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8357535-6774-4278-B497-A92C7170927C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8357535-6774-4278-B497-A92C7170927C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8357535-6774-4278-B497-A92C7170927C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8357535-6774-4278-B497-A92C7170927C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E265CA1A-CFA2-43DB-878F-2A5DF6A8C83E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86662961-B16C-4BC2-B5D5-3CA215A54984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86662961-B16C-4BC2-B5D5-3CA215A54984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86662961-B16C-4BC2-B5D5-3CA215A54984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86662961-B16C-4BC2-B5D5-3CA215A54984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5BD9C34-4D80-4D43-AF35-573D8615C12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BD9C34-4D80-4D43-AF35-573D8615C12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BD9C34-4D80-4D43-AF35-573D8615C12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BD9C34-4D80-4D43-AF35-573D8615C12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160DC6CD-A9A7-48BC-834E-C52B1DE9535D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160DC6CD-A9A7-48BC-834E-C52B1DE9535D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160DC6CD-A9A7-48BC-834E-C52B1DE9535D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160DC6CD-A9A7-48BC-834E-C52B1DE9535D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F449E5A1-AB48-479B-917D-CE39C63B6FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F449E5A1-AB48-479B-917D-CE39C63B6FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F449E5A1-AB48-479B-917D-CE39C63B6FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F449E5A1-AB48-479B-917D-CE39C63B6FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B944F5ED-9B79-4A02-8358-EFD01527F335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

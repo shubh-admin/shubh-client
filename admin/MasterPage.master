@@ -1,0 +1,165 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="admin_MasterPage, App_Web_3fqmlz3l" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href="../App_Themes/Staff/index.css" rel="stylesheet" type="text/css"></link>
+    <%--<link rel="short icon" href="../image/Khanda.gif" type="image/x-icon" />--%>
+    <title>Shubh Hosting :: Admin Panel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <div class="main">
+            <div>
+                <div style="width: 100%" align="center">
+                    <div class="flot">
+                        <div style="padding-top: 25px;" align="center">
+                            <img src="../image/headertextimg.jpg" width="600" height="90" alt="Shubh Hosting" /></div>
+                    </div>
+                </div>
+                <!--top -->
+                <div class="texting">
+                    <div class="menu">
+                        <div class="flot menupadding">
+                            <a href="../admin/home.aspx">
+                                <img src="../image/Homebutton.jpg" width="77px" height="28" border="0"></a></div>
+                        <div class="flot menupadding">
+                            <a href="../admin/Changepassword.aspx">
+                                <img src="../image/Change-Password.jpg" name="Image8" width="112" height="28" border="0"
+                                    id="Image8" /></a></div>
+                        <div class="flot menupadding">
+                            <asp:ImageButton runat="server" ImageUrl="~/image/Log-out.jpg" CausesValidation="False"
+                                OnClick="Unnamed1_Click" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="texting middlebg " style="margin-top: 8px">
+                <div class="flot leftpart">
+                    <div style="width: 200px; height: 590px; margin-top: 8px; margin-left: auto; border: solid 1px #d7d4d4;
+                        margin-right: auto; background-color: #f3f3f3">
+                        <table class="table">
+                            <tr>
+                                <td style="background-color: #fd6600; width: 180px; height: 25px; color: #dbdbdb;
+                                    font-size: 12px; font-weight: bold">
+                                    User Management
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../admin/UserManager.aspx?ID=0">Add</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="../admin/UserManager.aspx?ID=1">View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #fd6600; width: 180px; height: 25px; color: #dbdbdb;
+                                    font-size: 12px; font-weight: bold">
+                                    Domain Management
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="DomainManagement.aspx?ID=0">Add</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="DomainManagement.aspx?ID=1">View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #fd6600; width: 180px; height: 25px; color: #dbdbdb;
+                                    font-size: 12px; font-weight: bold">
+                                    Service Management
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="ServiceManagement.aspx?ID=0">Add</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="ServiceManagement.aspx?ID=1">View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #fd6600; width: 180px; height: 25px; color: #dbdbdb;
+                                    font-size: 12px; font-weight: bold">
+                                    Invoice Management
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="InvoiceManagement.aspx?ID=0">Add</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="InvoiceManagement.aspx?ID=1">View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #fd6600; width: 180px; height: 25px; color: #dbdbdb;
+                                    font-size: 12px; font-weight: bold">
+                                    Support Management
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="SupportManagement.aspx?ID=0">Add</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="SupportManagement.aspx?ID=1">View</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="flot rightpart">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="texting">
+                <div class="futterpadding">
+                    <div class="futterbg" align="center">
+                        <table>
+                            <tr>
+                                <td>
+                                    Home
+                                </td>
+                                <td>
+                                    Domain
+                                </td>
+                                <td>
+                                    Hosting
+                                </td>
+                                <td>
+                                    Support
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='4' style="text-align: center;">
+                                    Copyright © 2010 Shubh hosting . All Rights Reserved
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>msdnh.DataAccess.Base</name>
+    </assembly>
+    <members>
+        <member name="M:msdnh.DataAccess.Base.FetcherBase.Fill(System.Data.DataSet)">
+            <summary>
+            This fill should be used primarily for typed datasets and commands returning multiple results
+            with TableMappings defined. There is some use for this on non-typed datasets, but it's not ideal.
+            </summary>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,310 @@
+body
+{
+	margin: 0px;
+	color: #6d6d6d;
+	font-family: Verdana;
+	font-size: 11px;	
+	/*cursor:url('image/singhshashtar.cur');*/
+}
+#main
+{
+	background-color: #dbdbdb;
+	text-align: center;
+	/*cursor:url('../image/singhshashtar.cur');*/
+}
+.main
+{
+	background-color: #dbdbdb;
+	width: 100%;
+	margin: auto;
+}
+#Header
+{
+	clear: both;
+}
+.flot
+{
+	float: left;
+}
+.texting
+{
+	clear: left;
+}
+.menu
+{
+	background-color: #f3f3f3;
+	height: 37px;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+
+
+.menupadding
+{
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+
+.middlebg
+{
+	min-height: 950px;
+	height: auto;
+	width: 1173px;
+	border: solid 1px #999999;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+}
+
+
+.leftpart
+{
+	width: 245px;
+	min-height: 850px;
+	height: auto;
+}
+.rightpart
+{
+	width: 903px;
+	min-height: 850px;
+	height: auto;
+}
+.futterbg
+{
+	background-color: #dbdbdb;
+	height: 60px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #6d6d6d;
+}
+.futterpadding
+{
+	padding-left: 1px;
+	padding-right: 8px;
+	padding-top: 2px;
+}
+.middlebox
+{
+	height: 250px;
+	width: 700px;
+	border: solid 1px #666666;
+	background-color: #95E3E3;
+}
+
+.table
+{
+	height: 250px;
+	width: 200px;
+}
+.table td
+{
+	color: #6d6d6d;
+	width: 200px;
+	font-family: Verdana;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.table td a
+{
+	color: #6d6d6d;
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+.tr
+{
+	font-size: 8pt;
+	font-family: tahoma, arial, sans-serif;
+}
+.textbox
+{
+	border: 1px solid #717171;
+	font-size: 10px;
+	color: #4a4a4a;
+	font-family: tahoma, arial, sans-serif;
+	height: 18px;
+	background-color: #f3f3f3;
+}
+
+
+.blue_but
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	font-weight: bold;
+	font-size: 10pt;
+	border-left: #000000 1px solid;
+	color: #ffffff;
+	border-bottom: #000000 1px solid;
+	font-family: =, "font-family verdana";
+	height: 24px;
+	background-color: #00456c;
+}
+
+.labletext
+{
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.but
+{
+	border: #6d6d6d 1px solid;
+	font-size: 8pt;
+	color: #6d6d6d;
+	font-family: =, "font-family verdana";
+	background-color: #f3f3f3;
+}
+
+.div
+{
+	font-family: Tahoma;
+	width: 700px;
+	border: solid 1px #d7d4d4;
+	margin-left: auto;
+	line-height: 23px;
+	margin-right: auto;
+	background-color: #f3f3f3;
+	height: auto;
+	margin-top: 8px;
+	cursor:url('image/singhshashtar.cur'),default;
+}
+.capcha
+{
+	height: 25px;
+	width: 150px;
+	background-image: url('../image/capcha.bmp');
+	background-repeat: repeat;
+	border: solid 1px #6d6d6d;
+	color: Blue;
+	font-size: 20px;
+	font-family: Comic Sans MS;
+	font-weight: bold;
+}
+
+.griddata
+{
+	color: #6d6d6d;
+	width: 195px;
+	font-family: Verdana;
+	text-align: left;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.griddata td
+{
+	background-color: Aqua;
+	height: 20px;
+	width: 195px;
+}
+
+
+.griddata a
+{
+	background-color: #ABDEF2;
+	color: Black;
+	height: 20px;
+	width: 195px;
+	display: block;
+	text-decoration: none;
+	padding-top: 5px;
+}
+
+.griddata a:hover
+{
+	background-color: #094480;
+	color: White;
+	text-decoration: underline;
+	height: 20px;
+	width: 195px;
+}
+
+.datalistitem
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.pagenav
+{
+	color: #da0f00;
+	font-size:12px;
+	text-decoration: none;
+}
+
+
+.paging
+{
+	color: #6d6d6d;
+	text-decoration: none;
+}
+.paging hover
+{
+	color: #6d6d6d;
+	text-decoration: underline;
+}
+
+.paging hover : visisted
+{
+	color: green;
+	text-decoration: underline;
+}
+
+
+/*Custom for price*/
+.price, .price-shipping, .price-wrapping
+{
+	color: #da0f00;
+	font-size: 18px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.image-cap
+{
+	color: #094480;
+	font-size: 18px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.image-text
+{
+	color: #094480;
+	font-size: 15px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.image-slno
+{
+	color: #094480;
+	font-size: 12px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.button
+{
+	width: 120px;
+	background-image: url('../image/button-medium.gif');
+}
+
+.footer a
+{
+	color: #6d6d6d;
+	display: block;
+	text-decoration: none;
+}
+
+.footer a:hover
+{
+	color: #6d6d6d;
+	text-decoration: underline;
+}

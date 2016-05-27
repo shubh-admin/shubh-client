@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>msdnh.BF.MsDotnetHeaven</name>
+    </assembly>
+    <members>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.GetImages(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.GetImages(System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.GetImages(System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="strCatName"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.GetImagesForCategory(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strCategoryName"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.GetMyMessages(System.Int32,System.Int32,System.String)">
+            <summary>
+            Get Messages
+            </summary>
+            <param name="intRecepientId"></param>
+            <param name="intMessageId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.BF.MsDotnetHeaven.MsDotNetHeaven.LoggedError(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="strUrl"></param>
+            <param name="strError"></param>
+            <param name="strDesc"></param>
+            <param name="dtDate"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

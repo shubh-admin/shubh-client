@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /agent/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /image/
+Disallow: /App_Data/
+Disallow: /App_Theme/
+Disallow: /App_Code/
+Disallow: /bin/
+Disallow: /css/
+Disallow: /errors/

@@ -1,0 +1,10 @@
+P:\DotNetNuke\Applications\CachingHandler\bin\Release\SoftwareArchitects.Web.CachingHandler.dll
+P:\DotNetNuke\Applications\CachingHandler\bin\Release\SoftwareArchitects.Web.CachingHandler.pdb
+P:\DotNetNuke\Applications\CachingHandler\obj\Release\ResolveAssemblyReference.cache
+P:\DotNetNuke\Applications\CachingHandler\obj\Release\SoftwareArchitects.Web.CachingHandler.dll
+P:\DotNetNuke\Applications\CachingHandler\obj\Release\SoftwareArchitects.Web.CachingHandler.pdb
+C:\Projects\DotNetNuke\Applications\CachingHandler\bin\Release\SoftwareArchitects.Web.CachingHandler.dll
+C:\Projects\DotNetNuke\Applications\CachingHandler\bin\Release\SoftwareArchitects.Web.CachingHandler.pdb
+C:\Projects\DotNetNuke\Applications\CachingHandler\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\DotNetNuke\Applications\CachingHandler\obj\Release\SoftwareArchitects.Web.CachingHandler.dll
+C:\Projects\DotNetNuke\Applications\CachingHandler\obj\Release\SoftwareArchitects.Web.CachingHandler.pdb

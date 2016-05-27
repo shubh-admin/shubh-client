@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>msdnh.DataAccess.MsDotnetHeaven</name>
+    </assembly>
+    <members>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImages(System.String)">
+            <summary>
+            Status :2 for all status
+            Category:0 for all categories
+            </summary>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImages(System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImagesByCatId(System.Boolean,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="intCatId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImagesByCatId(System.Boolean,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="intCatId"></param>
+            <param name="intSortValue"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImagesById(System.Boolean,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="intImgId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImageDetailByImage(System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="strImage"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImageDetailByCatId(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intCatId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImagesForCategory(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strCategoryName"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.CheckUser(System.String,System.String)">
+            <summary>
+            Check the existance of user
+            </summary>
+            <param name="strUserName">UserName</param>
+            <param name="strEmail">Valid Email</param>
+            <returns>True/False quoting existance of user</returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUserProfile(System.Int32,System.String)">
+            <summary>
+            Retrieve registered user public profile
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUserSubmission(System.Int32,System.String)">
+            <summary>
+            Get User Submission
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUserStats(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetActivationDetail(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strEmail"></param>
+            <param name="strTableName"></param>
+            <param name="strActivationKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetActivationDetail(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strEmail"></param>
+            <param name="strTableName"></param>
+            <param name="strActivationKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetServicesDetail(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strUserID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetDomainsDetail(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strUserID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetDomainsByID(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetTransactionDetails(System.Int32,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intUserID"></param>
+            <param name="blnIsArchive"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetMessagesDetail(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intUserID"></param>
+            <param name="intMessageID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetSupportDetail(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intUserID"></param>
+            <param name="intSupportID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.UserCredentials(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strUserPassword"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.VerifyCredentials(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strUsePassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.VerifyCredentials(System.String,System.String,System.String)">
+            <summary>
+            Check whether login is valid
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strUsePassword"></param>
+            <param name="strType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.VerifyPassword(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strID"></param>
+            <param name="strUsePassword"></param>
+            <param name="strType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.VerifyExistance(System.String,System.String,System.String,System.String)">
+            <summary>
+            Check wheter username,accid,email of same type exist
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strACCID"></param>
+            <param name="strType"></param>
+            <param name="strEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUsers(System.String,System.String)">
+            <summary>
+            Get users per username
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUsers(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserName"></param>
+            <param name="strID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUsersByType(System.String,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strType"></param>
+            <param name="intStatus"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetUserRoles(System.String,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="strUserId"></param>
+            <param name="chConcateWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetCategoryList(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intResTypeId"></param>
+            <param name="intCatId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetResourcesType(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intResTypeId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetResourcesList(System.Int32,System.Int32,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intCatId"></param>
+            <param name="intSubCatId"></param>
+            <param name="dtStartDate"></param>
+            <param name="dtEndDate"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetSelectedResource(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intResId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetMyMessages(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intRecepientId"></param>
+            <param name="intMessageId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetMyMembers(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetEmailTemplate(System.Int32,System.String)">
+            <summary>
+            Get EmailTemplates
+            </summary>
+            <param name="intEmailID"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetMenuByType(System.Int32,System.String)">
+            <summary>
+            GetMenus by Menu Type
+            </summary>
+            <param name="intMenuType"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.LoggedError(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="strUrl"></param>
+            <param name="strError"></param>
+            <param name="strDesc"></param>
+            <param name="dtDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.LoggedUser(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Logged Users Presence on the system
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strUserIP"></param>
+            <param name="blnIsLogged"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUserProfile(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="intUserId"></param>
+            <param name="strDisplayName"></param>
+            <param name="strFName"></param>
+            <param name="strLName"></param>
+            <param name="strState"></param>
+            <param name="strCountry"></param>
+            <param name="strImage"></param>
+            <param name="strProfile"></param>
+            <param name="strSignature"></param>
+            <param name="blnAccepted"></param>
+            <param name="blnNewsLetters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.InsertImages(System.String,System.Int32,System.String,System.String,System.String,System.Double,System.Double,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="strCatName"></param>
+            <param name="intCatId"></param>
+            <param name="strImgCaption"></param>
+            <param name="strImgDescr"></param>
+            <param name="strImg"></param>
+            <param name="dblCostINR"></param>
+            <param name="dblCostUSD"></param>
+            <param name="blnStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.RegisterUser(System.String,System.String,System.String,System.String)">
+            <summary>
+            Register new user
+            </summary>
+            <param name="FName">First Name of User</param>
+            <param name="LName">Last Name of User</param>
+            <param name="Email">Valid Email id of User</param>
+            <param name="Pwd">Encryped Password</param>
+            <returns>True/False quoting user successfully registered onr no.</returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.AddUser(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Add new user from Admin Panel
+            </summary>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <param name="Email"></param>
+            <param name="Type"></param>
+            <param name="ACCID"></param>
+            <param name="UPDATEDBY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Update the USer record
+            </summary>
+            <param name="strID"></param>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <param name="Email"></param>
+            <param name="Type"></param>
+            <param name="ACCID"></param>
+            <param name="UPDATEDBY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strID"></param>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <param name="Email"></param>
+            <param name="Type"></param>
+            <param name="ACCID"></param>
+            <param name="UPDATEDBY"></param>
+            <param name="strName"></param>
+            <param name="strAdd1"></param>
+            <param name="strAdd2"></param>
+            <param name="strCity"></param>
+            <param name="strCountry"></param>
+            <param name="strPhone"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.AddDomains(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strUserID"></param>
+            <param name="strStatus"></param>
+            <param name="strDomain"></param>
+            <param name="strPrice"></param>
+            <param name="strRegDate"></param>
+            <param name="strNextDue"></param>
+            <param name="UPDATEDBY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateDomains(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strUserID"></param>
+            <param name="strID"></param>
+            <param name="strStatus"></param>
+            <param name="strDomain"></param>
+            <param name="strPrice"></param>
+            <param name="strRegDate"></param>
+            <param name="strNextDue"></param>
+            <param name="UPDATEDBY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.ActivateUser(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strUserId"></param>
+            <param name="strActivate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.DeleteUser(System.String)">
+            <summary>
+            Remove records permanently
+            </summary>
+            <param name="strUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.GenerateTicket(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strTicketID"></param>
+            <param name="intUserID"></param>
+            <param name="strDepartment"></param>
+            <param name="strPriority"></param>
+            <param name="strPanelDetail"></param>
+            <param name="strACCID"></param>
+            <param name="strSubject"></param>
+            <param name="strQuery"></param>
+            <param name="strStatus"></param>
+            <param name="intUpdatedBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateTicket(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strTicketID"></param>
+            <param name="strQuery"></param>
+            <param name="strStatus"></param>
+            <param name="intUpdatedBy"></param>
+            <returns></returns>
+        </member>
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Utility">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.DecryptString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.EncryptString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.HashPassword(System.String)">
+            <summary>
+            Hash password using SHA512 
+            </summary>
+            <param name="strPasswordToBeEncrypted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RemoveColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="dtTable"></param>
+            <param name="lstColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RenameColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="dtTable"></param>
+            <param name="lstOldCol"></param>
+            <param name="lstNewCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.AddColumn(System.Data.DataTable,System.String)">
+            <summary>
+            Add a new column in a Table
+            </summary>
+            <param name="dtTable"></param>
+            <param name="strColName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
