@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" masterpagefile="~/admin/MasterPage.master" autoeventwireup="true" inherits="admin_CategoryManager, App_Web_n0pp6tlb" title="singhshashtar" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="CategoryManager.aspx.cs" Inherits="admin_CategoryManager" Title="singhshashtar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">

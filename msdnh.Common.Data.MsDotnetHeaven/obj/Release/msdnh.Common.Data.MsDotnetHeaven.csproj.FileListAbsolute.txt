@@ -1,0 +1,6 @@
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\bin\Release\msdnh.Common.Data.MsDotnetHeaven.dll.config
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\bin\Release\msdnh.Common.Data.MsDotnetHeaven.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\bin\Release\msdnh.Common.Data.MsDotnetHeaven.pdb
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\obj\Release\ResolveAssemblyReference.cache
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\obj\Release\msdnh.Common.Data.MsDotnetHeaven.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.Common.Data.MsDotnetHeaven\obj\Release\msdnh.Common.Data.MsDotnetHeaven.pdb

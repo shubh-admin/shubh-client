@@ -1,4 +1,5 @@
-﻿<%@ page language="C#" masterpagefile="~/admin/MasterPage.master" autoeventwireup="true" inherits="admin_enquiry, App_Web_n0pp6tlb" title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true"
+    CodeFile="enquiry.aspx.cs" Inherits="admin_enquiry" Title="Untitled Page" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

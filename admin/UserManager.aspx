@@ -1,4 +1,5 @@
-﻿<%@ page language="C#" masterpagefile="~/admin/MasterPage.master" autoeventwireup="true" inherits="admin_UserManager, App_Web_n0pp6tlb" title="Shubh Client Panel :: Admin" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true"
+    CodeFile="UserManager.aspx.cs" Inherits="admin_UserManager" Title="Shubh Client Panel :: Admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

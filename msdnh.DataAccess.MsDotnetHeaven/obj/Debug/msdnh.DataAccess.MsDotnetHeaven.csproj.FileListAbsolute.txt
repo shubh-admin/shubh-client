@@ -1,0 +1,16 @@
+C:\Sites-Imp\msdnh\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\msdnh\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
+C:\Sites-Imp\msdnh\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\msdnh\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\msdnh\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\singhshashtar.com\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\singhshashtar.com\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\singhshashtar.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\ResolveAssemblyReference.cache
+C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.MsDotnetHeaven.XML
+C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
+C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb

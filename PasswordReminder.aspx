@@ -1,4 +1,5 @@
-﻿<%@ page title="" language="C#" masterpagefile="~/MainMaster.master" autoeventwireup="true" inherits="PasswordReminder, App_Web_abw5qgoe" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainMaster.master" AutoEventWireup="true"
+    CodeFile="PasswordReminder.aspx.cs" Inherits="PasswordReminder" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

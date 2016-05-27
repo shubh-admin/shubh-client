@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" masterpagefile="~/admin/MasterPage.master" autoeventwireup="true" inherits="admin_Changepassword, App_Web_n0pp6tlb" title="singhshashtar" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="Changepassword.aspx.cs" Inherits="admin_Changepassword" Title="singhshashtar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

@@ -1,4 +1,5 @@
-﻿<%@ page title="My Support" language="C#" masterpagefile="~/ClientMaster.master" autoeventwireup="true" validaterequest="false" inherits="MyDetails, App_Web_ykpb3h95" %>
+﻿<%@ Page Title="My Support" Language="C#" MasterPageFile="~/ClientMaster.master" AutoEventWireup="true"
+    ValidateRequest="false" CodeFile="MySupport.aspx.cs" Inherits="MyDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
