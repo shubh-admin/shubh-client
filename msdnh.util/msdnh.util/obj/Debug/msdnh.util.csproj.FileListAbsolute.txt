@@ -15,3 +15,9 @@ E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.util.pdb
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.csprojResolveAssemblyReference.cache
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.dll
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.util.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.util.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.csprojAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.csproj.CoreCompileInputs.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.util\msdnh.util\obj\Debug\msdnh.util.pdb

@@ -23,3 +23,11 @@ E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.Common.Data.MsDotnetHeaven.p
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.dll
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.pdb
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.csprojResolveAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.Common.Data.MsDotnetHeaven.dll.config
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.Common.Data.MsDotnetHeaven.XML
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.Common.Data.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.Common.Data.MsDotnetHeaven.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.csprojAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.csproj.CoreCompileInputs.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.Common.Data.MsDotnetHeaven\obj\Debug\msdnh.Common.Data.MsDotnetHeaven.pdb

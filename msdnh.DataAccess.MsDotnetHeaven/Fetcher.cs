@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using msdnh.DataAccess.Base;
 using msdnh.util;
 
-
 namespace msdnh.DataAccess.MsDotnetHeaven
 {
     /// <summary>

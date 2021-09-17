@@ -20,3 +20,11 @@ E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.pd
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.csprojResolveAssemblyReference.cache
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.csprojAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.csproj.CoreCompileInputs.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.XML
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.MsDotnetHeaven.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.csproj.CopyComplete
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.MsDotnetHeaven\obj\Debug\msdnh.DataAccess.MsDotnetHeaven.pdb

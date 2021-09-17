@@ -19,3 +19,11 @@ C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.BF.MsDotnetHeaven.dll
 C:\Sites-Imp\Client-Shubhcomputing.com\Bin\msdnh.BF.MsDotnetHeaven.pdb
 C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.dll
 C:\Sites-Imp\Client-Shubhcomputing.com\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.csprojAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.csproj.CoreCompileInputs.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.BF.MsDotnetHeaven.XML
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.BF.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.BF.MsDotnetHeaven.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.csproj.CopyComplete
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.BF.MsDotnetHeaven\obj\Debug\msdnh.BF.MsDotnetHeaven.pdb

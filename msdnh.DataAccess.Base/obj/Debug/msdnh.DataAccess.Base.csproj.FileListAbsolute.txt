@@ -19,3 +19,10 @@ E:\Gaurav Arora\Gaurav-Stuff\shubh-client\Bin\msdnh.DataAccess.Base.pdb
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb
 E:\Gaurav Arora\Gaurav-Stuff\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.csprojResolveAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.Base.XML
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.Base.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\Bin\msdnh.DataAccess.Base.pdb
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.csprojAssemblyReference.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.csproj.CoreCompileInputs.cache
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.dll
+D:\01 Work\01 Bitbucket\10 SCL\shubh-client\msdnh.DataAccess.Base\obj\Debug\msdnh.DataAccess.Base.pdb

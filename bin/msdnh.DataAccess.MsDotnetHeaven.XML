@@ -4,35 +4,41 @@
         <name>msdnh.DataAccess.MsDotnetHeaven</name>
     </assembly>
     <members>
-        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Utility">
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.MsDnHCollection">
             <summary>
             
             </summary>
         </member>
-        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.DecryptString(System.String)">
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.MsDnHCollection.MyEnum">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Utility">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.DecryptString(System.String)">
+            <summary>
             </summary>
             <param name="strPwd"></param>
             <returns></returns>
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.EncryptString(System.String)">
             <summary>
-            
             </summary>
             <param name="strPwd"></param>
             <returns></returns>
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.HashPassword(System.String)">
             <summary>
-            Hash password using SHA512 
+                Hash password using SHA512
             </summary>
             <param name="strPasswordToBeEncrypted"></param>
             <returns></returns>
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RemoveColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String})">
             <summary>
-            
             </summary>
             <param name="dtTable"></param>
             <param name="lstColName"></param>
@@ -40,7 +46,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.RenameColumns(System.Data.DataTable,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String})">
             <summary>
-            
             </summary>
             <param name="dtTable"></param>
             <param name="lstOldCol"></param>
@@ -49,11 +54,21 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Utility.AddColumn(System.Data.DataTable,System.String)">
             <summary>
-            Add a new column in a Table
+                Add a new column in a Table
             </summary>
             <param name="dtTable"></param>
             <param name="strColName"></param>
             <returns></returns>
+        </member>
+        <member name="T:msdnh.DataAccess.MsDotnetHeaven.Fetcher">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImages(System.String)">
             <summary>
@@ -68,6 +83,24 @@
             
             </summary>
             <param name="blnStatus"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImages(System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="strCatName"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImagesByCatId(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="blnStatus"></param>
+            <param name="intCatId"></param>
             <param name="strTableName"></param>
             <returns></returns>
         </member>
@@ -95,6 +128,21 @@
             
             </summary>
             <param name="blnStatus"></param>
+            <param name="intImgId"></param>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImageDetail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="strTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:msdnh.DataAccess.MsDotnetHeaven.Fetcher.GetImageDetail(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
             <param name="intImgId"></param>
             <param name="strTableName"></param>
             <returns></returns>
@@ -379,7 +427,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.LoggedError(System.String,System.String,System.String,System.DateTime)">
             <summary>
-            
             </summary>
             <param name="strUrl"></param>
             <param name="strError"></param>
@@ -389,7 +436,7 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.LoggedUser(System.Int32,System.String,System.Boolean)">
             <summary>
-            Logged Users Presence on the system
+                Logged Users Presence on the system
             </summary>
             <param name="intUserId"></param>
             <param name="strUserIP"></param>
@@ -398,7 +445,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUserProfile(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
-            
             </summary>
             <param name="intUserId"></param>
             <param name="strDisplayName"></param>
@@ -415,7 +461,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.InsertImages(System.String,System.Int32,System.String,System.String,System.String,System.Double,System.Double,System.Boolean)">
             <summary>
-            
             </summary>
             <param name="strCatName"></param>
             <param name="intCatId"></param>
@@ -429,7 +474,7 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.RegisterUser(System.String,System.String,System.String,System.String)">
             <summary>
-            Register new user
+                Register new user
             </summary>
             <param name="FName">First Name of User</param>
             <param name="LName">Last Name of User</param>
@@ -439,7 +484,7 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.AddUser(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
-            Add new user from Admin Panel
+                Add new user from Admin Panel
             </summary>
             <param name="UserName"></param>
             <param name="Password"></param>
@@ -451,7 +496,7 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
-            Update the USer record
+                Update the USer record
             </summary>
             <param name="strID"></param>
             <param name="UserName"></param>
@@ -464,7 +509,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            
             </summary>
             <param name="strID"></param>
             <param name="UserName"></param>
@@ -483,7 +527,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.AddDomains(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
-            
             </summary>
             <param name="strUserID"></param>
             <param name="strStatus"></param>
@@ -496,7 +539,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateDomains(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
-            
             </summary>
             <param name="strUserID"></param>
             <param name="strID"></param>
@@ -510,7 +552,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.ActivateUser(System.String,System.String)">
             <summary>
-            
             </summary>
             <param name="strUserId"></param>
             <param name="strActivate"></param>
@@ -518,14 +559,13 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.DeleteUser(System.String)">
             <summary>
-            Remove records permanently
+                Remove records permanently
             </summary>
             <param name="strUserId"></param>
             <returns></returns>
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.GenerateTicket(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
-            
             </summary>
             <param name="strTicketID"></param>
             <param name="intUserID"></param>
@@ -541,7 +581,6 @@
         </member>
         <member name="M:msdnh.DataAccess.MsDotnetHeaven.Modifier.UpdateTicket(System.String,System.String,System.String,System.Int32)">
             <summary>
-            
             </summary>
             <param name="strTicketID"></param>
             <param name="strQuery"></param>
